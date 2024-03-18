@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .bu {
+            font-size: 20px;
+        }
+
+        .bu-2 {
+            font-size: 20px;
+        }
+        p{
+            font-size: 30px;
+        }
+        .y{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis aspernatur nobis quibusdam voluptas.
+        Necessitatibus cupiditate sed aliquid nihil omnis molestias porro deserunt, voluptate atque earum!</p>
+    <button class="bu">Dark Mode</button>
+    <button class="bu-2">Light Mode</button>
+
+    <script>
+        var dark = document.getElementById("bu");
+
+        dark.addEventListener("click",function(){
+            var para = document.querySelector("p");
+            para.forEach(function(element){
+                element.classList.add("y");
+            });
+        });
+
+    </script>
+</body>
+</html>

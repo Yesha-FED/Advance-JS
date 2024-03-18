@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .even{
+            background-color: blueviolet;
+            color: aliceblue;
+        }
+        .odd{
+            background-color: crimson;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <p id="mypara">This is Para 0</p>
+    <p id="mypara">This is Para 1</p>
+    <p id="mypara">This is Para 2</p>
+    <p id="mypara">This is Para 3</p>
+    <p id="mypara">This is Para 4</p>
+    <p id="mypara">This is Para 5</p>
+
+    <script>
+        var myallptags = document.querySelectorAll("#mypara");
+        console.log(myallptags);
+
+        myallptags.forEach(function(p,index){
+            console.log(index);
+            console.log(p);
+
+            if (index%2==0) {
+                p.classList.add("even");
+            }
+            else
+            {
+                p.classList.add("odd");
+            }
+        })
+    </script>
+</body>
+</html>

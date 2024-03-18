@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .thumbnail img{
+            height: 50px;
+            width: 50px;
+        }
+        .maincontainer img{
+            height: 350px;
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+    <div class="thumbnail">
+        <img src="../../Images/bgimage.jpg" alt="">
+        <img src="../../Images/backgroundimage.jpg" alt="">
+        <img src="../../Images/bird.jpg" alt="">
+        <img src="../../Images/birdimage.jpg" alt="">
+        <img src="../../Images/images1.jpeg" alt="">
+    </div>
+
+    <div class="maincontainer">
+        <img src="../../Images/bgimage.jpg" alt="">
+    </div>
+
+    <script>
+        var allimg = document.querySelectorAll(".thumbnail img");
+        console.log(allimg);
+
+        allimg.forEach(function(img){
+            img.addEventListener("click",function(){
+                // get img src from selected element 
+                var mypath = this.getAttribute("src")
+                console.log(mypath);
+
+                var preview = document.querySelector(".maincontainer img");
+                console.log(preview);
+
+                //set previous get src image
+                preview.setAttribute("src",mypath);
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <h3>heyy</h3>
+    <h1>Welcome</h1>
+    <h3>heyy</h3>
+    <h1>Javascript</h1>
+    <h3>heyyyy</h3>
+
+    <button id="mybtn">Clickkkkkk</button>
+    <script>
+        var btn = document.getElementById("mybtn");
+
+        btn.addEventListener("click",function(){
+            var allH1 = document.querySelectorAll("h1");
+            console.log(allH1);
+            
+            console.log(allH1[1]);
+
+            allH1.forEach(function(element){
+                console.log(element);
+                element.style.color = "red"
+            })
+        })
+    </script>
+</body>
+</html>

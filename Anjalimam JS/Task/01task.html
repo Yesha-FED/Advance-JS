@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello.... Welcome to JS</h1>
+    <h1>Welcome......</h1>
+
+    <button id="mybtn">Click</button>
+
+    <script>
+        var btn = document.getElementById("mybtn");
+        
+        btn.addEventListener("click",function(){
+            var myh1 = document.querySelectorAll("h1");
+
+            myh1.forEach(function(element){
+                console.log(element);
+                element.style.color = "white";
+                element.style.backgroundColor = "crimson";
+                element.style.height = "60px";
+                element.style.width = "80vh";
+                element.style.position = "right";
+            })
+
+            // myh1.style.color = "white";
+            // myh1.style.backgroundColor = "crimson";
+            // myh1.style.height = "60px";
+            // myh1.style.width = "80vh";
+            // console.log(myh1);
+        })
+        
+    </script>
+</body>
+</html>
