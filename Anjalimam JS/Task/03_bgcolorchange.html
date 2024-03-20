@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .purple{
+        color: purple;
+       }
+       .red{
+        color: red;
+       }
+       .green{
+        color: green;
+       }
+       .steelblue{
+        color: steelblue;
+       }
+       .crimson{
+        color: crimson;
+       }
+       
+    </style>
+</head>
+<body id="body">
+    <h1>Background Color Change........</h1>
+    <hr>
+    <ul>
+        <li>Purple</li>
+        <li>Red</li>
+        <li>Green</li>
+        <li>Steelblue</li>
+        <li>Crimson</li>
+    </ul>
+
+    <h1 id="box"></h1>
+
+    <script>
+        var allli = document.querySelectorAll("li");
+
+        console.log(allli);
+
+        allli.forEach(function(li){
+            li.addEventListener("click",function(){
+                console.log(li);
+                console.log(this.textContent);
+
+                var h1 = document.getElementById("box");
+                document.body.style.backgroundColor="purple"
+                h1.textContent = this.textContent;
+            })
+        })
+    </script>
+
+</body>
+</html>

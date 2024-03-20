@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main .que{
+            background-color: crimson;
+            color: aliceblue;
+            height: 75px;
+            width: 60vh;
+        }
+        .sub .ans{
+            background-color: aqua;
+            color: black;
+            display: none;
+            height: 50px;
+            width: 60vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="sub">
+            <div class="que">
+                <h1>What is HTML?</h1>
+            </div>
+            <div class="ans">
+                <p>HTML is HYPER text transfer protocol</p>
+            </div>
+        </div>
+        <div class="sub">
+            <div class="que">
+                <h1>What is Javascript?</h1>
+            </div>
+            <div class="ans">
+                <p>Javascript is scripting language</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let allque = document.querySelectorAll(".sub .que");
+        console.log(allque);
+
+        allque.forEach(function(qu){
+            console.log(qu);
+
+            qu.addEventListener("click",function(){
+                console.log("clicked");
+
+                let ans = this.nextElementSibling;
+                console.log(ans);
+
+                if (ans.style.display == "block") {
+                    ans.style.display = "none";
+                }
+                else{
+                    ans.style.display = "block";
+                }
+            })
+        })
+    </script>
+</body>
+</html>

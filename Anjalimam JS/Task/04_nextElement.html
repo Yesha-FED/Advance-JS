@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .y{
+            text-align: center;
+            font-size: 80px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background: linear-gradient(90deg, rgba(193, 232, 6, 1) 0%, rgba(220, 8, 238, 1) 44%, rgba(8, 244, 150, 1) 100%);
+
+        }
+        .main{
+            background-color: plum;
+        }
+        .main .que{
+            background-color: wheat;
+            /* color: aliceblue; */
+            height: 75px;
+            width: 60vh;
+            text-align: center;
+        }
+        .sub .ans{
+            background-color: aqua;
+            color: black;
+            display: none;
+            height: 75px;
+            width: 70vh;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="y">Next Element.........</h1>
+    <hr>
+    <div class="main">
+        <div class="sub">
+            <div class="que">
+                <h1>What is Website ?</h1>
+            </div>
+            <div class="ans">
+                <p>It countains several webpages and data files that internet users can access through a browser.</p>
+            </div>
+        </div>
+        <div class="sub">
+            <div class="que">
+                <h1>How can the background color of an element be changed?</h1>
+            </div>
+            <div class="ans">
+                <p>Background is set by selecting the element by its class name of id name and then apply the background-color property on it to set the background color.</p>
+            </div>
+        </div>
+        <div class="sub">
+            <div class="que">
+                <h1>What is the meaning of the CSS selector?</h1>
+            </div>
+            <div class="ans">
+                <p>Cascading Style Sheet(CSS) is used to set the style in web pages that contain HTML elements. <br>
+                    It sets the background color, font size, font family, color, … etc properties of elements on a web page.</p>
+            </div>
+        </div>
+        <div class="sub">
+            <div class="que">
+                <h1>What is jQuery?</h1>
+            </div>
+            <div class="ans">
+                <p>JQuery is a fast, small, and feature-rich JavaScript library. <br>
+                   It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.</p>
+            </div>
+        </div>
+        <div class="sub">
+            <div class="que">
+                <h1>What are the default Bootstrap text settings?</h1>
+            </div>
+            <div class="ans">
+                <p>Bootstrap 5 uses a default font-size of 1rem (16px by default), and its line-height is 1.5.</p>
+            </div>
+        </div>
+        <div class="sub">
+            <div class="que">
+                <h1>What do you know about the Bootstrap Grid System?</h1>
+            </div>
+            <div class="ans">
+                <p>Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content. <br>
+                    It's built with flexbox and is fully responsive.</p>
+            </div>
+        </div>
+        <div class="sub">
+            <div class="que">
+                <h1>What is a bootstrap card and how would you create one?</h1>
+            </div>
+            <div class="ans">
+                <p>A basic Bootstrap card consists of a . card class with the . card-body class, allowing you to add text, images, links, and other Bootstrap elements within a rounded border.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let allque = document.querySelectorAll(".sub .que");
+        console.log(allque);
+
+        allque.forEach(function(qu){
+            console.log(qu);
+
+            qu.addEventListener("click",function(){
+                console.log("clicked");
+
+                let ans = this.nextElementSibling;
+                console.log(ans);
+
+                if (ans.style.display == "block") {
+                    ans.style.display = "none";
+                }
+                else{
+                    ans.style.display = "block";
+                }
+            })
+        })
+    </script>
+</body>
+</html>
