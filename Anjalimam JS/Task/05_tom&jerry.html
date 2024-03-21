@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom & Jerry</title>
+    <style>
+        .y{
+            text-align: center;
+            margin-left: 500px;
+        }
+        body{
+            background-color: black;
+        }
+        .d{
+            height: 50px;
+            width: 100px;
+            margin-left: 710px;
+        }
+    </style>
+</head>
+<body>
+    <img id="t&j" src="../Images/tomjerry.webp" height="500" width="500" class="y">
+    <br>
+    <button id="Catch" class="d" onclick="changeimage()">Catch Me Tom</button>
+
+    <script>
+
+        var i = 1;
+        function changeimage() {
+            var image = document.getElementById("t&j");
+            if (i == 2) {
+                image.src = "../Images/tomjerry.webp";
+                i = 1;
+            }
+            else {
+                image.src = "../Images/catch.webp";
+                i = 2;
+            }
+        };
+
+    </script>
+</body>
+</html>
