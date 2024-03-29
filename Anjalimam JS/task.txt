@@ -1,0 +1,1 @@
+7) accept values from user input and store in list

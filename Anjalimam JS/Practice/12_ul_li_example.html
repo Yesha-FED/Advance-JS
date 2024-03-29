@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <ul id="myul"></ul>
+
+    <script>
+        let myul = document.getElementById("myul");
+        console.log(ul);
+
+        var ul =  document.createElement("li");
+        ul.textContent = "HTML"
+        myul.append(ul);
+        // console.log(ul);
+
+        var ul =  document.createElement("li");
+        ul.textContent = "HELLO"
+        myul.append(ul);
+    </script>
+</body>
+</html>

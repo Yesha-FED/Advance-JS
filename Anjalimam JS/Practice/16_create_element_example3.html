@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let input = document.createElement("input");
+        console.log(input);
+        input.type = "text";
+        input.setAttribute("id","nameid");
+        input.setAttribute("placeholder","Enter Your name :");
+        document.body.append(input);
+
+        let bu = document.createElement("button");
+        bu.id = "btnid";
+        bu.textContent = "Click Here";
+        console.log(bu);
+        document.body.append(bu);
+
+        let h1 = document.createElement("h1");
+        h1.id = "myid";
+        // h1.addEventListener("click",function(){
+        //     var i = document.getElementById("nameid").value;
+        //     console.log(i);
+        // })
+        // h1.textContent = "Hello H1 is Here"
+        document.body.append(h1)
+        console.log(h1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d{
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        let input = document.createElement("input");
+       console.log(input);
+       input.setAttribute("type","text");
+       input.setAttribute("id","myinput");
+       input.setAttribute("placeholder","Enter Your color");
+       document.body.append(input);
+
+       let button = document.createElement("button");
+       console.log(button);
+       button.setAttribute("id","mybtn");
+       button.textContent = "Enter Color"
+       document.body.append(button);
+
+       button.addEventListener("click",function(){
+        
+        let div = document.createElement("div");
+        console.log(div);
+
+        div.setAttribute("class","d");
+        div.className = "d"             
+        div.style.backgroundColor = input.value
+        document.body.append(div)
+
+       });
+    </script>
+</body>
+</html>

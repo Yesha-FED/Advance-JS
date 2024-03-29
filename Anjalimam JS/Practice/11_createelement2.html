@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv{
+            height: 150px;
+            width: 150px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <button id="bu">Click Here</button>
+    <script>
+        let bu = document.getElementById("bu");
+        console.log(bu);
+
+        bu.addEventListener("click",function(){
+        // console.log("click");
+        var div = document.createElement("div");
+        console.log(div);
+
+        div.classList.add("mydiv");
+        document.body.append(div);
+        })
+    </script>
+</body>
+</html>

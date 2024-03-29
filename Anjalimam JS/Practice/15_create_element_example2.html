@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="linkid" placeholder="Enter your content here">
+    <button onclick="addData()">Add Data</button>
+
+    <script>
+        function addData()
+        {
+            let link = document.getElementById("linkid");
+            console.log(link);
+
+            let linkValue = link.value;
+            console.log(linkValue);
+
+            let a = document.createElement("a");
+            console.log(a);
+
+            a.textContent = "Click Here";
+            a.setAttribute("href",linkValue);
+            document.body.append(a);
+        }
+    </script>
+</body>
+</html>
