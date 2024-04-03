@@ -1,0 +1,30 @@
+=> push : to add specific element at run time in existing array 
+    myarray.push(new_element)
+
+=> length() : to return length of array
+
+=> pop() : to remove last element from the array , it return removed item 
+    myarray.pop();
+
+=>shift():
+=>unshift():
+
+=> splice() : to remove specific element from the specific position
+    var myarray = ["c","C++","java","python","node","react"]
+    e.g  splice(start_index_position,no_of_element_for_del)
+    myarray.splice(2,3)
+    var myarray = ["C","C++","react"]
+
+    => remove specific element from the specific position and add new element and replace
+
+    e.g subjectlist.splice(2,1,"node","react","mern")
+
+    => add specific elementat specific position
+
+    myarray.splice(2,0 ,"flutter)
+    [c,c++,flutter,java,python,node,react]
+
+=> indexof() : return respective element's index position
+    e.g. myarray.indexof(element);
+
+=>filter() : 

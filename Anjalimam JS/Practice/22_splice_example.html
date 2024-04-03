@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="findid" placeholder="element you want to find">
+    <input type="text" id="replaceid" placeholder="element you want to find">
+    <button onclick="applychange()">Apply</button>
+
+    <ul id="myul"></ul>
+
+    <script>
+        var subjectlist = ["c","c++","java","python","nodejs"];
+        let ul = document.querySelector("#myul");
+
+        function displayArray(){
+            ul.innerHTML = "";
+            subjectlist.forEach(function(subject){
+                let li = document.createElement("li");
+                li.textContent = subject;
+                ul.append(li);
+            })
+        }
+        displayArray();
+
+        function applychange(){
+            let findElement = document.getElementById("findid").value;
+            let newElement = document.getElementById("replaceid").value;
+            if(subjectlist.includes(findElement.toLowerCase()))
+            {
+                console.log("yes element exist");
+                // index position
+
+                let start_index = subjectlist.indexOf(findElement.toLowerCase());
+                console.log(start_index);
+
+                // subjectlist.splice(startelement_index, no_of_count, newelement)
+                 subjectlist.splice(start_index,1, newElement)
+
+                 console.log(subjectlist);
+                 displayArray();
+
+            }
+        }
+    </script>
+</body>
+</html>
