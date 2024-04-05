@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: url(../Images/ipltrophy.webp)no-repeat center center/cover;
+            width: 200vh;
+            height: 100vh;
+            filter: brightness(60%);
+            position: relative;
+        }
+        .y{
+            text-align: center;
+            color: black;
+            font-size: 50px;
+        }
+        div img {
+            width: 159px;
+            height: 159px;
+            margin-left: 20px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .teams {
+            display: flex;
+        }
+        .selected {
+            width: 159px;
+            height: 100px;
+            position: absolute;
+            top: 57%;
+            left: 29%;
+        }
+        #random {
+            width: 159px;
+            height: 100px;
+            position: absolute;
+            top: 57%;
+            left: 60%;
+        }
+        .vs {
+            position: absolute;
+            left: 48%;
+            color: aquamarine;
+            top: 63%;
+        }
+        #csk img:hover {
+            color: #494949 !important;
+            border-radius: 50px;
+            border-color: #494949 !important;
+            /* transition: all 0.3s ease 0s; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="y">Welcome to IPL Teams........Have Fun</h1>
+    <hr>
+    <div class="teams">
+        <div id="kkr"><img src="../Images/KKR.jpeg" alt="csk"></div>
+        <div id="rr"><img src="../Images/RR.webp" alt="csk"></div>
+        <div id="csk"><img src="../Images/CSK.png" alt=""></div>
+        <div id="mi"><img src="../Images/MI.png" alt="csk"></div>
+        <div id="dc"><img src="../Images/PBK.svg" alt="csk"></div>
+        <div id="srh"><img src="../Images/SRH.webp" alt="csk"></div>
+        <div id="dc"><img src="../Images/DC.webp" alt="csk"></div>
+        <div id="gt"><img src="../Images/GT.png" alt="csk"></div>
+    </div>
+
+    <div class="selected">
+        <img src=" " alt="" class="se">
+    </div>
+    <h1 class="vs">VS</h1>
+    <div id="random">
+        <img src="" alt="" id="hidden">
+    </div>
+
+<script>
+
+    let array=[];
+
+    let selected_team = document.querySelectorAll(".teams div img"); // Images list
+    // console.log(selected_team);
+
+    selected_team.forEach(function(t){   // Forevery image which is being selected
+
+        array.push(t.getAttribute("src")); //gettting images in array using push
+        console.log(t);
+        t.addEventListener("click",function(){ 
+            // getting each selected image's path
+            // console.log(t);  
+
+            let t=this.getAttribute("src");//get src attribute for selected img
+            // console.log(t);
+
+            let timg=document.querySelector(".se");//where to show selected img
+            timg.setAttribute("src",t);//set src attribute which src we got!
+
+            // filter for not getting same team
+            let ft=array.filter((selected_team) => selected_team!== t);
+            // console.log(ft);
+
+
+            //getting random image
+            let rt=Math.floor(Math.random()*ft.length);
+            // console.log(rt[length]);
+
+            let imageofrandom=array[rt];
+            // console.log(imageofrandom);
+
+            let opp = document.getElementById("random");
+            random.setAttribute("src",imageofrandom);
+
+            let hidden = document.getElementById("hidden");
+            hidden.src = ft[rt]
+        });
+    });
+</script>
+
+</body>
+</html>
