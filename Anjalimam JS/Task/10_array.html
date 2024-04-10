@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="myid" placeholder="Enter key : ">
+    <input type="text" id="valueid" placeholder="Enter value ">
+    <button onclick="saveData()">Click Here</button>
+    <ul id="myul"></ul>
+
+    <script>
+        let obj = {}; // blank object
+        function saveData() {
+            let k = document.getElementById("myid");
+            let v = document.getElementById("valueid");
+
+            obj[k.value] = v.value;
+
+            console.log(obj);
+
+            k.value = "";
+            v.value = "";
+        }
+        // let ul = document.querySelector("#myid");
+
+        // function saveData(){
+        // ul.innerHTML = "";
+        //  console.log(ul);
+        //  ul.forEach(function(item){
+        //      console.log(item);
+        //      let li = document.createElement("li");
+        //      li.textContent = item;
+
+        //      ul.append(li);
+
+        //  })
+        // }
+    </script>
+</body>
+</html>
